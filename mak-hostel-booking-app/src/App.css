@@ -1,0 +1,101 @@
+/* App.css */
+
+/* Variables */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+    --white-color: #ffffff;
+    --gray-color: #858796;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Reset styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  /* App container */
+  .App {
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-start;
+    background-color: var(--light-color);
+  }
+  
+  /* AppGlass container */
+  .AppGlass {
+    display: flex;
+    width: 100%; /* Take the full width minus the sidebar */
+    margin-left: var(--sidebar-width); 
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: margin-left var(--transition-speed);
+    overflow: hidden;
+  }
+  
+  /* Route container */
+  .AppGlass > div {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Sidebar styles */
+  .Sidebar {
+    z-index: 500; /* Ensures the sidebar is above the content */
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 1200px) {
+    .AppGlass {
+      /* Adjust margin for medium screens to show sidebar */
+      margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .AppGlass {
+      /* Full width on smaller screens */
+      margin-left: 0;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: center; /* Center content on small screens */
+    }
+  }
+  
+  /* Additional global styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Sidebar toggle button styles (when visible) */
+  .toggle-button {
+    position: absolute;
+    top: 1rem;
+    left: var(--sidebar-width);
+    transform: translateX(-100%);
+    z-index: 600; /* Above sidebar */
+  }
+  
+  /* ... Add any other global styles you might need ... */
+  

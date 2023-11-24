@@ -1,0 +1,118 @@
+/* index.css */
+
+.Login-card {
+  display: flex;
+  margin-left: 250px;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100vh;
+}
+
+.Login-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+.login-card2 {
+  text-align: center;
+}
+
+.card-image img {
+  width: 100px; /* Adjust image size */
+}
+
+.login-page {
+  text-align: center;
+}
+
+h1 {
+  color: #0056b3;
+  text-align: center;
+}
+.forgot{
+  color:#0056b3;
+}
+p2 {
+  color: #666;
+}
+
+.input-fields {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 20px; */
+}
+
+.checkboxes label {
+  display: flex;
+  /* align-items: center; */
+}
+
+.checkboxes input {
+  margin-right: 0;
+}
+
+.login-button {
+  background-color: #007bff; 
+  color: #fff;
+  padding: 10px 160px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.already-have-account {
+  margin-top: 20px;
+  color: #666;
+}
+
+.already-have-account a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.divider {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.divider hr {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+  border: none;
+  margin: 0;
+}
+
+.divider span {
+  margin: 0 10px;
+  color: #666;
+}
+
+.api-options {
+  margin-top: 20px;
+}
+
+

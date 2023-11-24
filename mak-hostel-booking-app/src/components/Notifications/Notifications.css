@@ -1,0 +1,141 @@
+/* Notifications.css */
+
+.Notifications {
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); */
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: 'Nunito', sans-serif; /* A modern, rounded font */
+}
+
+.update {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.update:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Subtle hover effect */
+}
+
+.update img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover; /* Ensure the images are nicely fitted */
+}
+
+.noti {
+  flex: 1;
+  padding: 0 10px; /* Space between image and text content */
+}
+
+.name {
+  font-weight: bold;
+  color: #007BFF; /* Use a blue that matches the border color for consistency */
+}
+
+.noti span {
+  color: #6c757d; /* A softer color for text */
+}
+
+.update hr {
+  border: none;
+  border-top: 1px solid #eee; /* A softer line color */
+  margin: 10px 0;
+}
+
+/* Last child shouldn't have a bottom margin */
+.update:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .Notifications {
+    max-height: none;
+    overflow-y: visible;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .update {
+    padding: 8px; /* Less padding for each notification item */
+  }
+
+  .noti {
+    padding: 0 8px; /* Adjust text content padding */
+  }
+}
+
+
+
+/* Notifications.css */
+
+.Notifications {
+  /* ... existing styles ... */
+  position: relative;
+}
+
+.clear-all {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent; /* Transparent background */
+  color: #dc3545; /* Text color matches the border */
+  border: 2px solid #dc3545; /* Colored border */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.clear-all:hover {
+  background-color: #dc3545; /* Button color changes on hover */
+  color: white; /* Text color changes on hover */
+}
+
+.clear-one {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #dc3545; /* Text color for the individual clear button */
+}
+
+.clear-one:hover {
+  opacity: 0.8; /* Slight transparency on hover for the individual clear button */
+}
+
+
+.update {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.update:hover {
+  background-color: #f8f9fa; /* A light grey to indicate hover state */
+}
+
+.notification-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.noti {
+  flex-grow: 1;
+}
+
+.name {
+  font-weight: bold;
+}
+
+

@@ -1,0 +1,12 @@
+# ignore the node_modules directory
+/node_modules
+mak-hostel-booking-app/backend/node_modules
+mak-hostel-booking-app/src/backend/node_modules
+
+# ignore the .env file
+# .env
+
+
+
+
+
