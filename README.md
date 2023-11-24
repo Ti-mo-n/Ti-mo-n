@@ -1,6 +1,2 @@
-- 👋 Hi, I’m @Ti-mo-n.
-
-<!---
-Ti-mo-n/Ti-mo-n is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# Makerere-Hostel-Booking-App
+Private repository for the Makerere Hostel Booking App project. A collaborative space for our team to build a streamlined hostel booking system for Makerere University students, using MVC architecture and software frameworks.
