@@ -23,7 +23,7 @@ const StudentReview = () => {
     const fetchData = async () => {
       try {
         const result = await fetch(
-          `http://localhost:3000/review/single/${hostelId}`
+          `https://appback-rki9qe7dr-timons-projects-d9c8ae5c.vercel.app${hostelId}`
         );
         const jsonResult = await result.json();
         setReviewData(jsonResult);

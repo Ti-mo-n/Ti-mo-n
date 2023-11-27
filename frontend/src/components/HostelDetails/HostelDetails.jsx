@@ -92,7 +92,7 @@ const HostelDetails = () => {
 
     try {
       // Send a POST request to the server
-      const response = await fetch("http://localhost:3000/hostellisting", {
+      const response = await fetch("https://appback-rki9qe7dr-timons-projects-d9c8ae5c.vercel.app", {
         method: "POST",
         body: formData,
       });

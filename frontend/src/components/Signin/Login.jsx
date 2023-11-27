@@ -7,7 +7,7 @@ function Login() {
     event.preventDefault();
     // Sends a request to the backend to create the account
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("https://appback-rki9qe7dr-timons-projects-d9c8ae5c.vercel.app", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const Sidebar = () => {
   // Function to handle the logout process
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:3000/logout", {
+      const response = await fetch("https://appback-rki9qe7dr-timons-projects-d9c8ae5c.vercel.app", {
         method: "GET", // Assuming your server uses GET for logout
       });
 

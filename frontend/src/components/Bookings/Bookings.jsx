@@ -40,7 +40,7 @@ const Bookings = () => {
     const fetchData = async () => {
       try {
         // Fetching booking data from the server using the hostelId
-        const result = await fetch(`http://localhost:3000/booking/${hostelId}`);
+        const result = await fetch(`https://appback-rki9qe7dr-timons-projects-d9c8ae5c.vercel.app${hostelId}`);
         const jsonResult = await result.json();
 
         // Updating the state with the fetched booking data
