@@ -1,0 +1,42 @@
+.parentContainer {
+  width: 100%;
+  color: #fff;
+  height: 112.5px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px;
+  background: var(--white); 
+  border-radius: 10px;
+  box-shadow: var(--boxShadow); 
+  transition: transform 0.3s;
+}
+
+.parentContainer:hover {
+  transform: scale(1.05);
+}
+
+.Cards {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1250px) {
+  .Cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .parentContainer {
+    height: 9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cards {
+    width: 98%;
+  }
+}

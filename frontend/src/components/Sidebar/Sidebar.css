@@ -1,0 +1,165 @@
+/* Sidebar.css */
+
+/* Variables */
+:root {
+  --primary-blue: #007BFF;
+  --white: #FFFFFF;
+  --gray: #788097;
+  --light-gray: #f9f9f9;
+  --dark-blue: #0056b3;
+  --boxShadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  --transition-speed: 300ms;
+  --sidebar-width: 250px; /* Width of the sidebar */
+}
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sidebar Styles */
+.Sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--sidebar-width);
+  background: var(--primary-blue);
+  box-shadow: var(--boxShadow);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform var(--transition-speed);
+  z-index: 1000; /* Ensure sidebar is above other content */
+  overflow-y: auto; /* Enable scrolling if content is long */
+}
+
+/* Toggle button style */
+.toggle-button {
+  color: #5a5c69;
+  position: fixed;
+  top: 1rem;
+  left: 4rem;
+  background: var(--white);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: var(--boxShadow);
+  cursor: pointer;
+  z-index: 1001; /* Ensure button is above the sidebar */
+  display: none; /* Hidden by default on large screens */
+}
+
+/* Close button inside the sidebar */
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--dark-blue);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Hidden by default on large screens */
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+/* User Info Styles */
+.user-info {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Menu Styles */
+.menu {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.menu {
+  color: #FFFFFF;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.menuItem {
+  color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+  margin-left: 2rem;
+  position: relative;
+  transition: all 300ms ease;
+  font-size: 14px;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  color: #192344;
+  background-color: var(--glass);
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  color: #192344;
+  background-color: var(--lightorange);
+  margin-left: 0;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.menu .menuItem:last-child {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+}
+
+/* Show toggle and close buttons on smaller screens */
+@media screen and (max-width: 768px) {
+  .toggle-button,
+  .close-button {
+    display: block;
+  }
+
+  /* Initially hide the sidebar on smaller screens */
+  .Sidebar {
+    transform: translateX(-100%);
+  }
+
+  /* Show the sidebar when it's open */
+  .Sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Add additional global styles as needed */

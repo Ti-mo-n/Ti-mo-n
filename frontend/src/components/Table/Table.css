@@ -1,0 +1,100 @@
+/* Table.css */
+
+/* Variables */
+:root {
+  --table-border-color: #e3e6f0;
+  --header-bg-color: #f8f9fc;
+  --header-text-color: #4e73df;
+  --row-hover-color: rgba(78, 115, 223, 0.05);
+  --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Table Container */
+.Table {
+  margin: 10px auto;
+  overflow-x: auto; /* Ensure table is scrollable on small screens */
+  background-color: var(--white-color);
+  border-radius: 10px;
+  /* box-shadow: 0px 10px 20px 0px var(--shadow-color); */
+  width: calc(100% - 20px); /* Account for margin */
+  border-collapse: collapse; /* Remove double borders */
+}
+
+/* Table Head */
+.MuiTableRow-root.MuiTableRow-head {
+  background-color: var(--header-bg-color);
+}
+
+.MuiTableRow-root.MuiTableRow-head > * {
+  font-weight: 600 !important;
+  color: var(--header-text-color); /* Stylish header text color */
+  border-bottom: 2px solid var(--table-border-color); /* Solid bottom border */
+  padding: 24px 40px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  font-family: var(--font-stack);
+}
+
+/* Table Body */
+.MuiTableRow-root {
+  transition: background-color var(--transition-speed);
+}
+
+.MuiTableRow-root:hover {
+  background-color: var(--row-hover-color); /* Subtle hover effect */
+}
+
+.MuiTableRow-root td, .MuiTableRow-root th {
+  padding: 12px 16px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid var(--table-border-color); /* Solid bottom border for each row */
+  font-family: var(--font-stack);
+}
+
+/* Remove bottom border for the last row */
+.MuiTableRow-root:last-child td {
+  border-bottom: none;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1250px) {
+  .Table {
+    width: 100%;
+  }
+
+  /* Simplify the table header for small screens */
+  .MuiTableRow-root.MuiTableRow-head > * {
+    font-size: 0.85em; /* Smaller font size */
+    padding: 8px; /* Smaller padding */
+  }
+  
+  /* Adjust cell styling for small screens */
+  .MuiTableRow-root td {
+    font-size: 0.85em; /* Smaller font size */
+    padding: 8px; /* Smaller padding */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Stack the table rows on very small screens for better readability */
+  .MuiTableRow-root {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .MuiTableRow-root td {
+    display: block;
+    text-align: right; /* Right-align for a clean look */
+    padding-left: 50%; /* Indent the content */
+    position: relative;
+  }
+
+  .MuiTableRow-root td::before {
+    content: attr(data-label); /* Use data-label attribute for content */
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
