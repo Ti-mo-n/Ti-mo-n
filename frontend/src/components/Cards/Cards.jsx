@@ -2,7 +2,7 @@
 import React from 'react';
 import './Cards.css';
 import { CardsData } from '../../Data/Data';
-
+import axios from axios;
 // Cards component
 const Cards = () => {
     // Function to handle card click events
