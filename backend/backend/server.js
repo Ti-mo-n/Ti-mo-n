@@ -12,7 +12,13 @@ const { requireAuth } = require("./authmiddleware");
 const { checkUser } = require("./authmiddleware");
 
 //used for routing
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://appback-iota.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 //used for allowing cookie parser
 app.use(cookieParser());
 // lets server accept json as a body
