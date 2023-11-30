@@ -1,10 +1,10 @@
 {
-"name": "makerere-hostel-booking-app",
+  "name": "makerere-hostel-booking-app",
   "version": "1.0.0",
   "description": "Private repository for the Makerere Hostel Booking App project. A collaborative space for our team to build a streamlined hostel booking system for Makerere University students, using MVC architecture and software frameworks such as react and node.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "build": "npm i"
   },
