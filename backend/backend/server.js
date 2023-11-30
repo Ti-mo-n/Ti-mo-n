@@ -19,6 +19,10 @@ app.use(cors(
         credentials: true
     }
 ));
+
+app.get("/",(req,res) => {
+    res.json("Hello");
+});
 //used for allowing cookie parser
 app.use(cookieParser());
 // lets server accept json as a body
